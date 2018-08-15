@@ -1,0 +1,6 @@
+name:     ld8abcde
+desc:     'LD A,((BC)|(DE))'
+base:     INST1:0ah,A:xxh,F:xx0x0xxxb,BC:0xxxh,DE:0xxxh
+cycle:    INST1:10h,A:00h,F:00000000b,BC:0000h,DE:0000h
+repeat:   511
+memcheck: (BC),(DE)

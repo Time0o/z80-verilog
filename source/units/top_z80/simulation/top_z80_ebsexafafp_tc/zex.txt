@@ -1,0 +1,5 @@
+name:   ebsexafafp
+desc:   'EX AF,AF''
+base:   INST1:08h,A:xxh,F:xxh,A':xxh,F':xxh
+cycle:  INST1:00h,A:00h,F:00h,A':00h,F':00h
+repeat: 1023

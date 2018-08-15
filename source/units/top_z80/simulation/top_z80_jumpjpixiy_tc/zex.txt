@@ -1,0 +1,6 @@
+name:    jumpjpixiy
+desc:    'JP (IX|IY)'
+base:    INST1:ddh,INST2:e9h,F:xx0x0xxxb,IX:0xxxh,IY:0xxxh
+cycle:   INST1:20h,INST2:00h,F:00000000b,IX:0000h,IY:0000h
+repeat:  511
+pccheck: abs

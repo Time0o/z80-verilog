@@ -1,0 +1,6 @@
+name:   ld8rhl
+desc:   'LD r,(HL)'
+base:   INST1:46h,A:xxh,F:xx0x0xxxb,BC:xxxxh,DE:xxxxh,HL:0xxxh
+cycle:  INST1:38h,A:00h,F:00000000b,BC:0000h,DE:0000h,HL:0000h
+skip:   INST1:{76h}
+repeat: 127

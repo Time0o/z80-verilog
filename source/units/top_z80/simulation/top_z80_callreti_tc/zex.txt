@@ -1,0 +1,6 @@
+name:    callreti
+desc:    '(RETI|RETN)'
+base:    INST1:edh,INST2:4dh,F:xx0x0xxxb,SP:0xxxh
+cycle:   INST1:00h,INST2:08h,F:00000000b,SP:0000h
+repeat:  511
+pccheck: abs

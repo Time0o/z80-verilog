@@ -1,0 +1,5 @@
+name:   ld16hlnn
+desc:   'LD HL,(nn)'
+base:   INST1:2ah,INST2:xxh,INST3:0xh,F:xx0x0xxxb,HL:xxxxh
+cycle:  INST1:00h,INST2:00h,INST3:00h,F:00000000b,HL:0000h
+repeat: 1023

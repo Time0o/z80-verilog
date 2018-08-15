@@ -1,0 +1,5 @@
+name:   ld16sphl
+desc:   'LD SP,HL'
+base:   INST1:f9h,F:xx0x0xxxb,HL:xxxxh,SP:xxxxh
+cycle:  INST1:00h,F:00000000b,HL:0000h,SP:0000h
+repeat: 1023

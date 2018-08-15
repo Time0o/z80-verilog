@@ -1,0 +1,5 @@
+name:   alu8i
+desc:   'ALUOP [A,]n'
+base:   INST1:c6h,INST2:xxh,A:xxh,F:xx0x0xxxb
+cycle:  INST1:38h,INST2:00h,A:00h,F:00000000b
+repeat: 127

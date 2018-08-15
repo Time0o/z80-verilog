@@ -1,0 +1,6 @@
+name:     alu8incdecrhl
+desc:     '(INC|DEC) (r|(HL))'
+base:     INST1:04h,A:xxh,F:xx0x0xxxb,BC:xxxxh,DE:xxxxh,HL:000xxxxxxxxxxxxxb
+cycle:    INST1:39h,A:00h,F:00000000b,BC:0000h,DE:0000h,HL:0000000000000000b
+repeat:   63
+memcheck: (HL)

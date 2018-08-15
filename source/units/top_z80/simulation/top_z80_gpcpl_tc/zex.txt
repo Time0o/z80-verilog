@@ -1,0 +1,5 @@
+name:   gpcpl
+desc:   'CPL'
+base:   INST1:2fh,A:00h,F:xx0x0xxxb
+cycle:  INST1:00h,A:ffh,F:00000000b
+repeat: 3

@@ -1,0 +1,6 @@
+name:    jumpjpc
+desc:    'JP cc,nn'
+base:    INST1:c2h,INST2:xxh,INST3:0xh,F:xx0x0xxxb
+cycle:   INST1:38h,INST2:00h,INST3:00h,F:11010111b
+repeat:  1
+pccheck: abs

@@ -1,0 +1,4 @@
+name:  rota
+desc:  '(RLCA|RRCA|RLA|RRA)'
+base:  INST1:07h,A:xxh,F:xx0x0xxxb
+cycle: INST1:18h,A:ffh,F:00000000b

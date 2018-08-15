@@ -1,0 +1,5 @@
+name:   gpneg
+desc:   'NEG'
+base:   INST1:edh,INST2:44h,A:00h,F:xx0x0xxxb
+cycle:  INST1:00h,INST2:00h,A:ffh,F:00000000b
+repeat: 3

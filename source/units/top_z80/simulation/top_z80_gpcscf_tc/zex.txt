@@ -1,0 +1,5 @@
+name:   gpcscf
+desc:   '(CCF|SCF)'
+base:   INST1:3fh,A:xxh,F:xx0x0xxxb
+cycle:  INST1:08h,A:ffh,F:00000000b
+repeat: 1

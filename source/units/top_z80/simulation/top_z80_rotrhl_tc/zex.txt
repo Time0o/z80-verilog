@@ -1,0 +1,6 @@
+name:     rotrhl
+desc:     '(RLC|RL|RRC|RR) (r|HL)'
+base:     INST1:cbh,INST2:00h,A:xxh,F:xx0x0xxxb,BC:xxxxh,DE:xxxxh,HL:0xxxh
+cycle:    INST1:00h,INST2:1fh,A:00h,F:00000000b,BC:0000h,DE:0000h,HL:0000h
+repeat:   31
+memcheck: (HL)

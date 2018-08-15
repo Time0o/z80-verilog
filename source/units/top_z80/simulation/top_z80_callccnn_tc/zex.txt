@@ -1,0 +1,8 @@
+name:     callccnn
+desc:     'CALL cc,nn'
+base:     INST1:c4h,INST2:xxh,INST3:0xh,F:x00x0xxxb,SP:0xxxh
+cycle:    INST1:38h,INST2:00h,INST3:00h,F:01000000b,SP:0000h
+skip:     SP:{0000h;0001h}
+repeat:   63
+memcheck: (CALL_PCH,CALL_PCL)
+pccheck:  abs

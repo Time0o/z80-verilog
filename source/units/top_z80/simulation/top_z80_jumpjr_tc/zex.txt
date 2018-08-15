@@ -1,0 +1,7 @@
+name:    jumpjr
+desc:    'JR [(C|NC|Z|NZ)] e'
+base:    INST1:18h,INST2:xxh,F:xx0x0xxxb
+cycle:   INST1:38h,INST2:00h,F:11010111b
+skip:    INST1:{00h;08h;10h}
+repeat:  3
+pccheck: rel

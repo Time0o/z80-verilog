@@ -1,0 +1,6 @@
+name:     rotrldrrd
+desc:     '(RLD|RRD)'
+base:     INST1:edh,INST2:67h,F:xx0x0xxxb,A:00h,HL:0xxxh
+cycle:    INST1:00h,INST2:08h,F:00000000b,A:ffh,HL:0000h
+repeat:   1
+memcheck: (HL)

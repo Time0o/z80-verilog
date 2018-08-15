@@ -1,0 +1,5 @@
+name:   alu16addixiy
+desc:   'ADD (IX,pp|IY,rr)'
+base:   INST1:ddh,INST2:09h,F:xx0x0xxxb,IX:xxxxh,IY:xxxxh,BC:xxxxh,DE:xxxxh,HL:xxxxh,SP:xxxxh
+cycle:  INST1:20h,INST2:30h,F:00000000b,IX:0000h,IY:0000h,BC:0000h,DE:0000h,HL:0000h,SP:0000h
+repeat: 127

@@ -1,0 +1,5 @@
+name:   ld16ddnn
+desc:   'LD dd,nn'
+base:   INST1:01h,INST2:xxh,INST3:xxh,F:xx0x0xxxb,BC:xxxxh,DE:xxxxh,HL:xxxxh,SP:xxxxh
+cycle:  INST1:30h,INST2:00h,INST3:00h,F:00000000b,BC:0000h,DE:0000h,HL:0000h,SP:0000h
+repeat: 255

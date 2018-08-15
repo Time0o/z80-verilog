@@ -1,0 +1,5 @@
+name:   ebsexx
+desc:   'EXX'
+base:   INST1:d9h,F:xx0x0xxxb,BC:xxxxh,DE:xxxxh,HL:xxxxh,B'C':xxxxh,D'E':xxxxh,H'L':xxxxh
+cycle:  INST1:00h,F:00000000b,BC:0000h,DE:0000h,HL:0000h,B'C':0000h,D'E':0000h,H'L':0000h
+repeat: 1023

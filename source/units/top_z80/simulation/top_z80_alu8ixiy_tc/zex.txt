@@ -1,0 +1,6 @@
+name:     alu8ixiy
+desc:     'ALUOP [A,]((IX|IY) + d)'
+base:     INST1:ddh,INST2:86h,INST3:xxh,A:xxh,F:xx0x0xxxb,IX:0xxxh,IY:0xxxh
+cycle:    INST1:20h,INST2:38h,INST3:00h,A:00h,F:00000000b,IX:0000h,IY:0000h
+repeat:   63
+memcheck: (IX+INST3),(IY+INST3)

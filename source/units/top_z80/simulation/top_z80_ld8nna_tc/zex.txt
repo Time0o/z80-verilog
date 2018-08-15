@@ -1,0 +1,6 @@
+name:     ld8nna
+desc:     'LD (nn),A'
+base:     INST1:32h,INST2:xxh,INST3:0xh,A:xxh,F:xx0x0xxxb
+cycle:    INST1:00h,INST2:00h,INST3:00h,A:00h,F:00000000b
+repeat:   1023
+memcheck: (INST3:INST2)

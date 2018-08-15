@@ -1,0 +1,7 @@
+name:     ld16pushixiy
+desc:     'PUSH (IX|IY)'
+base:     INST1:ddh,INST2:e5h,F:xx0x0xxxb,IX:xxxxh,IY:xxxxh,SP:0xxxh
+cycle:    INST1:20h,INST2:00h,F:00000000b,IX:0000h,IY:0000h,SP:0000h
+skip:     SP:{0000h;0001h}
+repeat:   511
+memcheck: (SP-2),(SP-1)

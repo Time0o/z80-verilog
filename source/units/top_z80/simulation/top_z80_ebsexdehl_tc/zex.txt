@@ -1,0 +1,5 @@
+name:   ebsexdehl
+desc:   'EX DE,HL'
+base:   INST1:ebh,F:xx0x0xxxb,DE:xxxxh,HL:xxxxh
+cycle:  INST1:00h,F:00000000b,DE:0000h,HL:0000h
+repeat: 1023

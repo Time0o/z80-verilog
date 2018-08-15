@@ -1,0 +1,5 @@
+name:   alu16incdecixiy
+desc:   '(INC|DEC) (IX|IY)'
+base:   INST1:ddh,INST2:23h,F:xx0x0xxxb,IX:xxxxh,IY:xxxxh
+cycle:  INST1:20h,INST2:08h,F:00000000b,IX:0000h,IY:0000h
+repeat: 255

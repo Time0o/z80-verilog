@@ -1,0 +1,7 @@
+name:     ebscpid
+desc:     '(CPI|CPIR|CPD|CPDR)'
+base:     INST1:edh,INST2:a1h,A:xxh,F:xx0x0xxxb,BC:0001h,DE:0xxxh,HL:0xxxh
+cycle:    INST1:00h,INST2:08h,A:00h,F:00000000b,BC:0000h,DE:0000h,HL:0000h
+repeat:   511
+memcheck: (HL)
+pccheck:  rel

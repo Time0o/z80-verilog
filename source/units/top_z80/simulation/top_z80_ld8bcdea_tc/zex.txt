@@ -1,0 +1,5 @@
+name:   ld8bcdea
+desc:   'LD ((BC)|(DE),A'
+base:   INST1:02h,A:xxh,F:xx0x0xxxb,BC:0xxxh,DE:0xxxh
+cycle:  INST1:10h,A:00h,F:00000000b,BC:0000h,DE:0000h
+repeat: 511

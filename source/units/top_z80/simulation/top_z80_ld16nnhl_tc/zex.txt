@@ -1,0 +1,6 @@
+name:     ld16nnhl
+desc:     'LD (nn),HL'
+base:     INST1:22h,INST2:xxh,INST3:0xh,F:xx0x0xxxb,HL:xxxxh
+cycle:    INST1:00h,INST2:00h,INST3:00h,F:00000000b,HL:0000h
+repeat:   1023
+memcheck: (INST3:INST2),([INST3:INST2]+1)

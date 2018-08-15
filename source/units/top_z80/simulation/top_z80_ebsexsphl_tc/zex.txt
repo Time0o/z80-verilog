@@ -1,0 +1,6 @@
+name:     ebsexsphl
+desc:     'EX (SP),HL'
+base:     INST1:e3h,F:xx0x0xxxb,HL:xxxxh,SP:0xxxh
+cycle:    INST1:00h,F:00000000b,HL:0000h,SP:0000h
+repeat:   1023
+memcheck: (SP),(SP+1)

@@ -1,0 +1,5 @@
+name:   ld8ann
+desc:   'LD A,(nn)'
+base:   INST1:3ah,INST2:xxh,INST3:0xh,A:xxh,F:xx0x0xxxb
+cycle:  INST1:00h,INST2:00h,INST3:00h,A:00h,F:00000000b
+repeat: 1023

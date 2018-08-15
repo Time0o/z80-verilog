@@ -1,0 +1,6 @@
+name:     srtsetrhl
+desc:     'SET (r|HL)'
+base:     INST1:cbh,INST2:c0h,A:xxh,F:xx0x0xxxb,BC:xxxxh,DE:xxxxh,HL:0xxxh
+cycle:    INST1:00h,INST2:3fh,A:00h,F:00000000b,BC:0000h,DE:0000h,HL:0000h
+repeat:   15
+memcheck: (HL)

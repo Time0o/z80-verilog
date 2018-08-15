@@ -1,0 +1,5 @@
+`include "alu.vh"
+`include "fsm.vh"
+`include "interrupt.vh"
+`include "opcode.vh"
+`include "regfile.vh"

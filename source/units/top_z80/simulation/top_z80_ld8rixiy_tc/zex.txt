@@ -1,0 +1,6 @@
+name:   ld8ixiy
+desc:   'LD r,((IX|IY) + d)'
+base:   INST1:ddh,INST2:46h,INST3:xxh,F:xx0x0xxxb,IX:0xxxh,IY:0xxxh
+cycle:  INST1:20h,INST2:38h,INST3:00h,F:00000000b,IX:0000h,IY:0000h
+skip:   INST2:{76h}
+repeat: 63

@@ -1,0 +1,5 @@
+name:   ld16popixiy
+desc:   'POP (IX|IY)'
+base:   INST1:ddh,INST2:e1h,F:xx0x0xxxb,IX:xxxxh,IY:xxxxh,SP:0xxxh
+cycle:  INST1:20h,INST2:00h,F:00000000b,IX:0000h,IY:0000h,SP:0000h
+repeat: 511

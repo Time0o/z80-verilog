@@ -1,0 +1,6 @@
+name:     shiftarhl
+desc:     '(SLA|SRA) (r|HL)'
+base:     INST1:cbh,INST2:20h,A:xxh,F:xx0x0xxxb,BC:xxxxh,DE:xxxxh,HL:0xxxh
+cycle:    INST1:00h,INST2:0fh,A:80h,F:00000000b,BC:8000h,DE:8000h,HL:0000h
+repeat:   7
+memcheck: (HL)

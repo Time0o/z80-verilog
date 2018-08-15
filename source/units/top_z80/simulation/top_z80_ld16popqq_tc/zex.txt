@@ -1,0 +1,5 @@
+name:   ld16popqq
+desc:   'POP qq'
+base:   INST1:c1h,A:xxh,F:xxh,BC:xxxxh,DE:xxxxh,HL:xxxxh,SP:0xxxh
+cycle:  INST1:30h,A:00h,F:00h,BC:0000h,DE:0000h,HL:0000h,SP:0000h
+repeat: 255

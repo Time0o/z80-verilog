@@ -1,0 +1,7 @@
+name:     ld8ixiyr
+desc:     'LD ((IX|IY) + d),r'
+base:     INST1:ddh,INST2:70h,INST3:xxh,A:xxh,F:xx0x0xxxb,BC:xxxxh,DE:xxxxh,HL:xxxxh,IX:0xxxh,IY:0xxxh
+cycle:    INST1:20h,INST2:07h,INST3:00h,A:00h,F:00000000b,BC:0000h,DE:0000h,HL:0000h,IX:0000h,IY:0000h
+skip:	  INST2:{76h}
+repeat:   63
+memcheck: (IX+INST3),(IY+INST3)

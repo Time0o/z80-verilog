@@ -1,0 +1,6 @@
+name:     shiftlrhl
+desc:     'SRL (r|HL)'
+base:     INST1:cbh,INST2:38h,A:xxh,F:xx0x0xxxb,BC:xxxxh,DE:xxxxh,HL:0xxxh
+cycle:    INST1:00h,INST2:07h,A:81h,F:00000000b,BC:0000h,DE:0000h,HL:0000h
+repeat:   31
+memcheck: (HL)

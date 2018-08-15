@@ -1,0 +1,6 @@
+name:       alu16hlcarry
+desc:       '(ADC|SBC) HL,ss'
+base:       INST1:edh,INST2:4ah,F:xx0x0xxxb,BC:xxxxh,DE:xxxxh,HL:xxxxh,SP:xxxxh
+cycle:      INST1:00h,INST2:38h,F:00000000b,BC:0000h,DE:0000h,HL:0000h,SP:0000h
+repeat:     127
+flagignore: 14h ; TODO: fix simulator

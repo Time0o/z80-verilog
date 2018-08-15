@@ -1,0 +1,6 @@
+name:    callretcc
+desc:    'RET cc'
+base:    INST1:c0h,F:xx0x0xxxb,SP:0xxxh
+cycle:   INST1:38h,F:00000000b,SP:0000h
+repeat:  127
+pccheck: abs

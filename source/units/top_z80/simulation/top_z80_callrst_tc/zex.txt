@@ -1,0 +1,7 @@
+name:    callrst
+desc:    'RST p'
+base:    INST1:c7h,F:xx0x0xxxb,SP:0xxxh
+cycle:   INST1:38h,F:00000000b,SP:0000h
+skip:    SP:{0000h;0001h}
+repeat:  127
+pccheck: abs

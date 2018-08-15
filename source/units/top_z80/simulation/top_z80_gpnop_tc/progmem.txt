@@ -1,0 +1,2 @@
+// BEGIN TESTCASE #0
+@0000 00

@@ -1,0 +1,5 @@
+name:   ld16ixiynn
+desc:   'LD (IX|IY),nn'
+base:   INST1:ddh,INST2:21h,INST3:xxh,INST4:xxh,F:xx0x0xxxb
+cycle:  INST1:20h,INST2:00h,INST3:00h,INST4:00h,F:00000000b
+repeat: 511

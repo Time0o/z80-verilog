@@ -1,0 +1,6 @@
+name:     rotixiy
+desc:     '(RLC|RL|RRC|RR) ((IX|IY) + d)'
+base:     INST1:ddh,INST2:cbh,INST3:xxh,INST4:06h,F:xx0x0xxxb,IX:0xxxh,IY:0xxxh
+cycle:    INST1:20h,INST2:00h,INST3:00h,INST4:18h,F:00000000b,IX:0000h,IY:0000h
+repeat:   127
+memcheck: (IX+INST3),(IY+INST3)

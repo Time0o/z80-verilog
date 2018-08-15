@@ -1,0 +1,4 @@
+name:  gpdaa
+desc:  'DAA'
+base:  INST1:27h,A:00h,F:xx000x00b
+cycle: INST1:00h,A:ffh,F:00010011b

@@ -1,0 +1,7 @@
+name:     ebsldid
+desc:     '(LDI|LDIR|LDD|LDDR)'
+base:     INST1:edh,INST2:a0h,A:xxh,F:xx0x0xxxb,BC:0001h,DE:0xxxh,HL:0xxxh
+cycle:    INST1:00h,INST2:18h,A:00h,F:00000000b,BC:0000h,DE:0000h,HL:0000h
+repeat:   255
+memcheck: (DE),(HL)
+pccheck:  rel

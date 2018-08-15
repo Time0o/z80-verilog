@@ -1,0 +1,6 @@
+name:    jumpdjnz
+desc:    'DJNZ e'
+base:    INST1:10h,INST2:xxh,F:xx0x0xxxb,BC:0000h
+cycle:   INST1:00h,INST2:00h,F:00000000b,BC:0003h
+repeat:  255
+pccheck: rel
