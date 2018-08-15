@@ -62,7 +62,7 @@ always @* begin
 	flags_out[FLAG_IDX_C]  = flags_in[FLAG_IDX_C];
 
 	sub = ((mode == ALU_MODE_SUB)       || (mode == ALU_MODE_SBC) ||
-           (mode == ALU_MODE_SBC_16BIT) || (mode == ALU_MODE_CP)  ||
+	       (mode == ALU_MODE_SBC_16BIT) || (mode == ALU_MODE_CP)  ||
 	       (mode == ALU_MODE_NEG)       || (mode == ALU_MODE_CPB));
 
 	carry = ((mode == ALU_MODE_ADC) || (mode == ALU_MODE_ADC_16BIT) ||
