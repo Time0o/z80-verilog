@@ -1,3 +1,6 @@
 [submodule "ictest"]
 	path = ictest
 	url = https://github.com/Time0o/TUD_ictest
+[submodule "testprogs"]
+	path = testprogs
+	url = https://github.com/Time0o/TUD_z80_testprogs
