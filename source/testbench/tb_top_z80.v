@@ -5,7 +5,9 @@ module tb_top_z80 (
 
 `include "z80.vh"
 
+`ifndef IVERILOG
 vunit unit();
+`endif
 
 wire o_n_iorq;
 wire o_n_halt;
@@ -23,25 +25,6 @@ reg i_n_int;
 reg [7:0] din_init;
 reg [4:0] loop_counter;
 reg loop_condition;
-
-top_z80 top_z80_i (
-    .I_CLK(i_clk),
-    .I_N_RESET(i_n_reset),
-    .I_N_NMI(i_n_nmi),
-    .I_N_INT(i_n_int),
-    .O_ADDR(o_addr),
-    .O_N_IORQ(o_n_iorq),
-    .O_N_HALT(o_n_halt),
-    .O_N_M1(o_n_m1),
-    .O_N_MREQ(o_n_mreq),
-    .O_N_RD(o_n_rd),
-    .O_N_WR(o_n_wr),
-    .IO_DATA(io_data),
-    .VCC(),
-    .GND(),
-    .VCC3IO(),
-    .GNDIO()
-);
 
 localparam PROGMEM_BYTES = 4096;
 localparam INT_DATAMEM_BYTES = 512;
@@ -79,6 +62,47 @@ datamem_mock #(
     .we(~o_n_wr),
     // Outputs
     .dout(io_data)
+);
+
+`ifdef IVERILOG
+
+z80 z80_i (
+    // Inputs
+    .clk(i_clk),
+    .n_reset(i_n_reset),
+    .n_int(i_n_int),
+    .n_nmi(i_n_nmi),
+    .din(io_data),
+    // Outputs
+    .n_iorq(o_n_iorq),
+    .n_halt(o_n_halt),
+    .n_m1(o_n_m1),
+    .n_mreq(o_n_mreq),
+    .n_rd(o_n_rd),
+    .n_wr(o_n_wr),
+    .addr(o_addr),
+    .dout(io_data)
+);
+
+`else
+
+top_z80 top_z80_i (
+    .I_CLK(i_clk),
+    .I_N_RESET(i_n_reset),
+    .I_N_NMI(i_n_nmi),
+    .I_N_INT(i_n_int),
+    .O_ADDR(o_addr),
+    .O_N_IORQ(o_n_iorq),
+    .O_N_HALT(o_n_halt),
+    .O_N_M1(o_n_m1),
+    .O_N_MREQ(o_n_mreq),
+    .O_N_RD(o_n_rd),
+    .O_N_WR(o_n_wr),
+    .IO_DATA(io_data),
+    .VCC(),
+    .GND(),
+    .VCC3IO(),
+    .GNDIO()
 );
 
 // externally initialize program memory
@@ -132,6 +156,8 @@ initial begin
     $readmemh("iomem.txt", iomem_swap, 0, IOMEM_BYTES - 1);
 end
 
+`endif // IVERILOG
+
 // clock
 parameter CLKPERIOD = 100;
 
@@ -155,9 +181,17 @@ initial begin
 
     i_n_reset = 1'b1;
 
+`ifdef IVERILOG
+    $dumpfile("run.vcd");
+    $dumpvars(0,tb_top_z80);
+    #(10000 * CLKPERIOD);
+    $finish;
+`else
     #((PROGMEM_BYTES + 1) * CLKPERIOD);
 
     `include "testcase.v"
+`endif
+
 end
 
 endmodule

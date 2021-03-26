@@ -9,7 +9,43 @@ module idram (
     output [7:0] dout
 );
 
-wire csb1, csb2, web;
+`ifdef IVERILOG
+
+wire cs1, cs2, we_int;
+wire [7:0] din_int;
+
+datamem_mock #(
+    .SZ_LOG2(8),
+    .INITFILE("datamem_int1.txt")
+) datamem_mock_i1 (
+    .clk(clk),
+    .ce(cs1),
+    .we(we_int),
+    .addr(addr[7:0]),
+    .din(din_int),
+    .dout(dout)
+);
+
+datamem_mock #(
+    .SZ_LOG2(8),
+    .INITFILE("datamem_int2.txt")
+) datamem_mock_i2 (
+    .clk(clk),
+    .ce(cs2),
+    .we(we_int),
+    .addr(addr[7:0]),
+    .din(din_int),
+    .dout(dout)
+);
+
+assign #10 cs1     = ~addr[8] && ce;
+assign #10 cs2     = addr[8] && ce;
+assign #10 we_int  = we;
+assign #10 din_int = din;
+
+`else // IVERILOG
+
+wire csb1, csb2, web_int;
 wire [7:0] din_int, dout1, dout2;
 
 SY180_256X8X1CM8 #(.INITFILE("datamem_int1.txt")) SY180_256X8X1CM8_i1 (
@@ -39,7 +75,7 @@ SY180_256X8X1CM8 #(.INITFILE("datamem_int1.txt")) SY180_256X8X1CM8_i1 (
     .DI5(din_int[5]),
     .DI6(din_int[6]),
     .DI7(din_int[7]),
-    .WEB(web)
+    .WEB(web_int)
 );
 
 SY180_256X8X1CM8 #(.INITFILE("datamem_int2.txt")) SY180_256X8X1CM8_i2 (
@@ -69,14 +105,16 @@ SY180_256X8X1CM8 #(.INITFILE("datamem_int2.txt")) SY180_256X8X1CM8_i2 (
     .DI5(din_int[5]),
     .DI6(din_int[6]),
     .DI7(din_int[7]),
-    .WEB(web)
+    .WEB(web_int)
 );
 
 assign #10 csb1    = ~(~addr[8] && ce);
 assign #10 csb2    = ~(addr[8] && ce);
+assign #10 web_int = ~we;
 assign #10 din_int = din;
-assign #10 web     = ~we;
 
 assign dout = addr[8] ? dout2 : dout1;
+
+`endif // IVERILOG
 
 endmodule

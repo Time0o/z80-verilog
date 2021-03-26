@@ -5,10 +5,10 @@ module datamem_mock #(
     parameter INITFILE = "datamem.txt"
 ) (
     input clk,
-    input [SZ_LOG2-1:0] addr,
-    input [7:0] din,
     input ce,
     input we,
+    input [SZ_LOG2-1:0] addr,
+    input [7:0] din,
     output reg [7:0] dout
 );
 

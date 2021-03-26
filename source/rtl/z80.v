@@ -43,7 +43,11 @@ always @(posedge clk or negedge n_reset) begin
         n_rd    <= 1'b1;
         n_wr    <= 1'b1;
         addr    <= 16'h0000;
+`ifdef IVERILOG
+        dout    <= 8'hzz;
+`else
         dout    <= 8'h00;
+`endif
         dout_en <= 1'b0;
     end
     else begin
@@ -56,8 +60,15 @@ always @(posedge clk or negedge n_reset) begin
         n_rd    <= ext_n_rd;
         n_wr    <= ext_n_wr;
         addr    <= cpu_addr;
-        dout    <= cpu_dout;
+`ifdef IVERILOG
+        if (cpu_dout_en)
+            dout <= cpu_dout;
+        else
+            dout <= 8'hzz;
+`else
+        dout <= cpu_dout;
         dout_en <= cpu_dout_en;
+`endif
     end
 end
 

@@ -6,9 +6,37 @@ module ipram (
     input ce,
     input [11:0] addr,
     input [7:0] din,
+`ifdef IVERILOG
+    output [7:0] dout,
+`else
     output reg [7:0] dout,
+`endif
     output loaded
 );
+
+`ifdef IVERILOG
+
+wire cs, we_int;
+wire [7:0] din_int;
+
+datamem_mock #(
+    .SZ_LOG2(12),
+    .INITFILE("progmem.txt")
+) progmem_i (
+    .clk(clk),
+    .ce(cs),
+    .we(we_int),
+    .addr(addr),
+    .din(din_int),
+    .dout(dout)
+);
+
+assign #10 cs = ce;
+assign we_int = 1'b0;
+assign #10 din_int = din;
+assign loaded = 1'b1;
+
+`else // IVERILOG
 
 wire [31:0] dout_int;
 
@@ -144,5 +172,7 @@ always @* begin
         endcase
     end
 end
+
+`endif // IVERILOG
 
 endmodule
