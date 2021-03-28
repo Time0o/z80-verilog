@@ -1,12 +1,3 @@
-report/aux/*
-!report/aux/.gitkeep
-report/resources/*
-!report/resources/dia
-report/resources/dia/*~
-!report/resources/pdf
-!report/resources/png
-!report/resources/verilog
-
 run/z80_test
 run/progmem.txt
 run/run.vcd

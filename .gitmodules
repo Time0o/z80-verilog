@@ -4,3 +4,6 @@
 [submodule "testprogs"]
 	path = testprogs
 	url = https://github.com/Time0o/TUD_z80_testprogs
+[submodule "report"]
+	path = report
+	url = https://github.com/Time0o/z80-verilog-report
