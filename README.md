@@ -14,16 +14,16 @@ source files contain instantiations of proprietary cells, which are also not
 included.
 
 The toplevel testcases found under `source/units/top_z80/simulation/` were
-automatically generated using the `ictest` tool specifically developed for this
-purpose and cover all valid Z80 instructions. Note that running `ictest` and
-the generated testcases only possible in conjunction with a special IC design
-tool suite used at TUD.
+automatically generated using the `ictest` tool under `submodules/ictest/`
+specifically developed for this purpose and cover all valid Z80 instructions.
+Note that running `ictest` and the generated testcases only possible in
+conjunction with a special IC design tool suite used at TUD.
 
 Some C test programs written especially to verify the final synthesis results.
-These can be found under `testprogs/`.
+These can be found under `submodules/testprogs/`.
 
 More details about the design and implementation of this project can be found
-(in German) in the report under `report/pdf/master.pdf`.
+(in German) in the report under `submodules/report/pdf/`.
 
 ## Building
 

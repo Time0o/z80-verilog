@@ -1,9 +1,9 @@
 [submodule "ictest"]
-	path = ictest
+	path = submodules/ictest
 	url = https://github.com/Time0o/z80-verilog-ictest
 [submodule "testprogs"]
-	path = testprogs
+	path = submodules/testprogs
 	url = https://github.com/Time0o/z80-verilog-testprogs
 [submodule "report"]
-	path = report
+	path = submodules/report
 	url = https://github.com/Time0o/z80-verilog-report
