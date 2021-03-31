@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="preview.png">
+</p>
+
 # Verilog Implementation of a Z80 Compatible Processor Architecture
 
 ## Introduction
